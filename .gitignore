@@ -1,3 +1,5 @@
 .DS_Store
 .~lock.data.ods#
 dist
+node_modules
+package-lock.json

@@ -4,6 +4,10 @@ Dart a JS:
 
     $ dart2js --out=<<salida.js>> <<entrada.dart>>
 
+Para demo.dart:
+
+    $ dart2js --out=dist/darttut.js src/demo.dart
+
 ---
 
 Fuentes:
