@@ -31,6 +31,18 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.2"
+  leveldb:
+    description:
+      name: leveldb
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.1"
+  meta:
+    description:
+      name: meta
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.5"
   path:
     description:
       name: path
