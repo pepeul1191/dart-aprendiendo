@@ -6,7 +6,7 @@ void main(){
 }
 
 void insertar(){
-  set('apellido', 'valdivia').then((Null){
+  put('apellido', 'valdivia').then((Null){
     print('insertó');
   }).catchError((e){
     print(e);
@@ -14,10 +14,16 @@ void insertar(){
 }
 
 void consultar(){
-  get('apellidos').then((data){
-    print('1 then');
+  get('apellido').then((data){
     print(data);
-    print('2 then');
+  }).catchError((e){
+    print(e);
+  });
+}
+
+void eliminar(){
+  delete('apellido').then((Null){
+    print('eliminado');
   }).catchError((e){
     print(e);
   });
@@ -39,7 +45,12 @@ Future<String> get(String key) async {
   return db.get(key);
 }
 
-Future<Null> set(String key, String value) async {
+Future<Null> put(String key, String value) async {
   LevelDB<String, String> db = await LevelDB.openUtf8(dbPath);
   db.put(key, value);
+}
+
+Future<String> delete(String key) async {
+  LevelDB<String, String> db = await LevelDB.openUtf8(dbPath);
+  return db.delete(key);
 }
